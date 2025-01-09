@@ -16,7 +16,7 @@ function App() {
       const res = await axios(`${BASE_URL}/data`)
       
       setData(res.data.data)
-      // console.log(res.data.data);
+      
       
 
     } catch (error) {
