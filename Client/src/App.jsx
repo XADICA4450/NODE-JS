@@ -49,8 +49,8 @@ function App() {
     clearTimeout(timeout)
     try {
       timeout = setTimeout(async () => {
-        const res = await axios(`${BASE_URL}/data/search?name=${e.target.value.trim()}`)
-        setProducts([...res.data.data])
+        const res = await axios(`${BASE_URL}/data/search?description=${e.target.value.trim()}`)
+        setData([...res.data.data])
       }, 500);
     } catch (error) {
       console.log(error);
