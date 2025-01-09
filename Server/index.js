@@ -132,10 +132,10 @@ app.put("/data/:id", (req, res) => {
 });
 
 app.get("/data/search", (req, res) => {
-    const { description: serachQuery } = req.query;
+    const { description: searchQuery } = req.query;
   
     const filteredData = data.filter((q) =>
-      q.description.toLowerCase().includes(serachQuery)
+      q.description.toLowerCase().includes(searchQuery)
     );
   
     console.log(filteredData);
@@ -166,13 +166,13 @@ app.patch("/data/:id", (req, res) => {
             data[idx].description = description;
         }
         if (title !== undefined) {
-            data[idx].name = title;
+            data[idx].title = title;
         }
         if (price !== undefined) {
-            data[idx].name = price;
+            data[idx].price = price;
         }
         if (category !== undefined) {
-            data[idx].name = category;
+            data[idx].category = category;
         }
 
 
